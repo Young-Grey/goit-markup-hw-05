@@ -111,7 +111,7 @@ ol {
    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-a::after{
+.nav-ul li:first-child .nav-a::after{
    display:block;
    position: absolute;
    bottom: -1px;
@@ -182,7 +182,7 @@ ol {
    background-image:linear-gradient(to bottom,
          rgba(46, 47, 66, 0.7),
          rgba(46, 47, 66, 0.7)), 
-         url(/images/hero-banner-office.jpg);
+         url(../images/hero-banner-office.jpg);
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
@@ -306,6 +306,7 @@ ol {
    align-items: center;
    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
    border-radius: 0px 0px 4px 4px;
+   background:#fff; 
 }
 
 .team-li:last-child{
@@ -587,3 +588,236 @@ footer .logo{
    transition-duration: 500ms;
    transition-timing-function: linear;
 }
+
+.footer-subscribe-cont{
+   width: 453px;
+   margin-left: 80px;
+}
+
+.form-subscribe{
+   display: flex;
+   flex-direction: row;
+}
+
+.input-subscribe{
+   width: 264px;
+   height: 40px;
+   border: 1px solid #fff;
+   border-radius: 4px;
+   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+   background-color: #2E2F42;
+   padding: 8px 16px;
+   color: #fff;
+}
+
+.input-subscribe:focus-within{
+   outline: none;
+}
+
+.subscribe-btn{
+   position: relative;
+   border-radius: 4px;
+   padding: 8px 24px;
+   width: 165px;
+   height: 40px;
+   border: none;
+   background-color: #4D5AE5;
+   color: #fff;
+   margin-left: 24px;
+   display: block;
+   text-align: left;
+   cursor: pointer;
+}
+
+.subscribe-btn:hover,
+.subscribe-btn:focus{
+background-color: #31D0AA;
+}
+
+.send-icon{
+   position: absolute;
+   top: 10px;
+   right: 24px;
+   fill: #fff;
+}
+
+/*
+Modal Form
+*/
+
+.modal-overlay {
+   background-color: rgba(0, 0, 0, 0.5);
+ 
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 999;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ 
+   opacity: 0;
+   pointer-events: none;
+   transition: opacity 250ms ease-in-out;
+ }
+ 
+ .modal-overlay.is-open{
+   opacity: 1;
+   pointer-events: auto;
+ }
+ 
+ .modal {
+   position: relative;
+   background-color: #fff;
+   border-radius: 4px;
+   padding: 24px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+   max-width: 480px;
+   max-height: 584px;
+   overflow-y: auto;
+   display: flex;
+   flex-direction: column;
+ }
+
+ .close-btn-cont{
+   position: absolute;
+   top: 24px;
+   right: 24px;
+   width: 24px;
+   height: 24px;
+   cursor: pointer;
+   background-color: #E7E9FC;
+   border: 1px solid rgba(0, 0, 0, 0.1);
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .close-icon{
+   fill: #2E2F42;
+ }
+
+ .call-back-form{
+   margin-top: 48px;
+   display: flex;
+   gap: 8px;
+   flex-direction: column;
+ }
+
+ .modal-form-title{
+   max-width: 360px;
+   min-height: 24px;
+   font-family: "Roboto", sans-serif;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 1.5;
+   letter-spacing: 0.02em;
+   text-align: center;
+   color: #2e2f42;
+   align-self: center;
+   margin-bottom: 16px;
+ }
+
+ .call-back-form label{
+   position: relative;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   font-family: "Roboto", sans-serif;
+   font-weight: 400;
+   font-size: 12px;
+   line-height: 117%;
+   letter-spacing: 0.04em;
+   color: #8e8f99;
+ }
+
+ .call-back-form label:focus-within .input-modal-icon{
+   fill: #4d5ae5;
+ }
+
+ .input-modal{
+   border: 1px solid rgba(46, 47, 66, 0.4);
+   border-radius: 4px;
+   width: 360px;
+   height: 40px;
+   margin-top: 4px;
+   padding-left: 38px;
+  }
+
+  .input-modal:focus-within,
+  .input-modal:focus{
+   outline: none;
+   border-color: #4D5AE5;
+ }
+ 
+.textarea-modal{
+   border: 1px solid rgba(46, 47, 66, 0.4);
+   border-radius: 4px;
+   width: 360px;
+   margin-top: 4px;
+   padding: 8px 16px;
+}
+
+.textarea-modal:focus-within{
+   border-color: #4D5AE5;
+   outline: none;
+}
+
+.input-txt{
+   font-family: "Roboto", sans-serif;
+   font-weight: 400;
+   font-size: 12px;
+   line-height: 117%;
+   letter-spacing: 0.04em;
+   color: rgba(46, 47, 66, 0.4);
+}
+
+ .checkbox-cont{
+   display: flex;
+   flex-direction: row;
+   margin-top: 16px;
+ }
+
+ .checkbox-cont label{ 
+   display:inline-block;
+   padding-left: 8px;;
+ }
+
+ .input-modal-icon{
+   position: absolute;
+   left: 16px;
+   bottom: 11px;
+   fill: #2E2F42;
+ }
+
+ input[type="checkbox"] {
+   width: 16px;
+   height: 16px;
+   border: 1px solid rgba(46, 47, 66, 0.4);
+   border-radius: 4px;
+
+}
+
+ .checkbox-cont a{
+   display: inline;
+   line-height: 133%;
+   text-decoration: underline;
+   text-decoration-skip-ink: none;
+   color: #4d5ae5;
+ }
+
+ .sumbit-btn{
+   margin-top: 24px;
+   border: none;
+   width: 169px;
+   height: 56px;
+   background-color: #4D5AE5;
+   border-radius: 4px;
+   color: #fff;
+   align-self: center;
+   cursor: pointer;
+   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+ }
