@@ -703,7 +703,7 @@ Modal Form
    border-radius: 4px;
    padding: 72px 24px 24px 24px;
    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-   width: 480px;
+   width: 408px;
    min-height: 584px;
    overflow-y: auto;
    display: flex;
@@ -740,16 +740,9 @@ Modal Form
    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
 
- .close-icon:hover,
- .close-icon:focus{
+ .close-btn-cont:hover .close-icon,
+ .close-btn-cont:focus .close-icon{
    fill: #ffffff;
- }
-
- .call-back-form{
-   margin-top: 48px;
-   display: flex;
-   gap: 8px;
-   flex-direction: column;
  }
 
  .modal-form-title{
@@ -766,30 +759,45 @@ Modal Form
    margin-bottom: 16px;
  }
 
- .call-back-form label{
+ .call-back-form{
+   margin-top: 48px;
+   display: flex;
+   gap: 8px;
+   flex-direction: column;
+ }
+
+.modal-label-cont{
+   margin-bottom: 8px;
+}
+
+ .modal-form-label{
    position: relative;
    width: 100%;
-   display: flex;
+   display: block;
    flex-direction: column;
    font-family: "Roboto", sans-serif;
    font-weight: 400;
    font-size: 12px;
-   line-height: 117%;
+   line-height: 1.17;
    letter-spacing: 0.04em;
    color: #8e8f99;
+   margin-bottom: 4px;
  }
 
- .call-back-form label:focus-within .input-modal-icon{
-   fill: #4d5ae5;
- }
+.modal-input-cont{
+   position: relative;
+}
 
  .input-modal{
    border: 1px solid rgba(46, 47, 66, 0.4);
    border-radius: 4px;
-   width: 360px;
+   width: 100%;
    height: 40px;
    margin-top: 4px;
    padding-left: 38px;
+   background-color: transparent;
+   outline: transparent;
+   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .input-modal:focus-within,
@@ -797,7 +805,21 @@ Modal Form
    outline: none;
    border-color: #4D5AE5;
  }
- 
+
+ .input-modal-icon{
+   position: absolute;
+   left: 16px;
+   top: 50%;
+   transform: translateY(-50%); 
+   fill: #2E2F42;
+   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
+
+ .input-modal:focus-within .input-modal-icon,
+ .input-modal:focus .input-modal-icon{
+   fill: #4D5AE5;
+ }
+
 .textarea-modal{
    border: 1px solid rgba(46, 47, 66, 0.4);
    border-radius: 4px;
@@ -829,13 +851,6 @@ Modal Form
  .checkbox-cont label{ 
    display:inline-block;
    padding-left: 8px;;
- }
-
- .input-modal-icon{
-   position: absolute;
-   left: 16px;
-   bottom: 11px;
-   fill: #2E2F42;
  }
 
  input[type="checkbox"] {
