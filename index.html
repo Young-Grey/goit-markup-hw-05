@@ -44,7 +44,7 @@
     <section class="hero-image">
       <div class="container">
         <h1 class="hero-h">Effective Solutions for Your Business</h1>
-        <button type="button" class="cta-btn">Order Service</button>
+        <button type="button" class="cta-btn" data-modal-open>Order Service</button>
       </div>
     </section>
     <!-- #endregion Hero Image  -->
@@ -397,9 +397,11 @@
         </ul>      
       </div>
       <div class="footer-subscribe-cont">
-        <p class="footer-media-title">Subscribe</p>
         <form class="form-subscribe">
-          <input class="input-subscribe" type="email" placeholder="E-mail"/>
+          <label class="form-subscribe-label">
+            Subscribe
+            <input class="input-subscribe" name="email" type="email" placeholder="E-mail"/>
+          </label>
           <button class="subscribe-btn" type="submit">Subscribe
             <svg class="send-icon" width="24" height="20">
               <use href="./images/icons.svg#icon-send" width="24" height="20"></use>
@@ -411,9 +413,9 @@
   </footer>
   <!-- #endregion Footer -->
   <!-- #region Modal Form-->
-  <div class="modal-overlay">
+  <div class="modal-overlay" data-modal>
     <div class="modal">
-      <div class="close-btn-cont">
+      <div class="close-btn-cont" data-modal-close>
         <svg class="close-icon" width="8" height="8">
           <use href="./images/icons.svg#icon-close" width="8" height="8"></use>
         </svg>
@@ -455,5 +457,6 @@
     </div>
   </div>
 <!-- #endregion Modal Form-->
+<script src="./js/modal.js"></script>
 </body>
 </html>
