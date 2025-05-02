@@ -823,6 +823,10 @@ Modal Form
    fill: #4D5AE5;
  }
 
+.comment-cont{
+   margin-bottom: 16px;
+}
+
 .textarea-modal{
    border: 1px solid rgba(46, 47, 66, 0.4);
    border-radius: 4px;
@@ -857,7 +861,7 @@ Modal Form
    margin-bottom: 24px;
  }
 
-.modal-form-checkbox{
+ .modal-form-checkbox{
    background-color: transparent;
 }
 
@@ -916,5 +920,5 @@ Modal Form
    font-weight: 500;
    line-height: 1.5;
    letter-spacing: 0.04em;
-   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
