@@ -815,8 +815,11 @@ Modal Form
    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
 
- .input-modal:focus-within .input-modal-icon,
- .input-modal:focus .input-modal-icon{
+ .input-modal:focus-within{
+   fill: #4D5AE5;
+ }
+
+ .input-modal:focus-within svg{
    fill: #4D5AE5;
  }
 
@@ -824,8 +827,13 @@ Modal Form
    border: 1px solid rgba(46, 47, 66, 0.4);
    border-radius: 4px;
    width: 360px;
+   height: 120px;
    margin-top: 4px;
    padding: 8px 16px;
+   background-color: transparent;
+   outline: transparent;
+   resize: none;
+   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .textarea-modal:focus-within{
@@ -846,7 +854,12 @@ Modal Form
    display: flex;
    flex-direction: row;
    margin-top: 16px;
+   margin-bottom: 24px;
  }
+
+.modal-form-checkbox{
+   background-color: transparent;
+}
 
  .checkbox-cont label{ 
    display:inline-block;
@@ -861,18 +874,38 @@ Modal Form
 
 }
 
- .checkbox-cont a{
+.span-policy{
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   width: 16px;
+   height: 16px;
+   border: 1px solid rgba(46, 47, 66, 0.4);
+   border-radius: 2px;
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   fill: transparent;
+}
+
+.form-check-icon{
+   fill: #ffffff;
+}
+
+.modal-form-checkbox:checked .span-policy{
+   fill:#F4F4FD;
+}
+
+.policy-link{
    display: inline;
-   line-height: 133%;
+   line-height: 1.33;
    text-decoration: underline;
    text-decoration-skip-ink: none;
    color: #4d5ae5;
- }
+}
 
  .sumbit-btn{
    margin-top: 24px;
    border: none;
-   width: 169px;
+   min-width: 169px;
    height: 56px;
    background-color: #4D5AE5;
    border-radius: 4px;
@@ -880,4 +913,8 @@ Modal Form
    align-self: center;
    cursor: pointer;
    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+   font-weight: 500;
+   line-height: 1.5;
+   letter-spacing: 0.04em;
+   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
