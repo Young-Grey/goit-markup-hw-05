@@ -867,11 +867,6 @@ Modal Form
    border-radius: 4px;
 }
 
- .modal-form-label{ 
-   display:inline-block;
-   padding-left: 8px;;
- }
-
 .span-policy{
    display: inline-flex;
    align-items: center;
